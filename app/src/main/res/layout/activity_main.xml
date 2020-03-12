@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data></data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <!-- Scoped Store Download Dir -->
+                <TextView
+                    android:id="@+id/tv_show_img_in_scoped_storage_download_dir"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="顯示Scoped Store download dir的圖片:" />
+
+                <ImageView
+                    android:id="@+id/im_img_in_scoped_storage_download_dir"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitCenter" />
+
+                <Button
+                    android:id="@+id/btn_img_in_scoped_storage_download_dir"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:text="Show image (用傳統的方法且不需要權限)"
+                    android:textAllCaps="false" />
+
+                <!-- Public Storage Download Dir -->
+                <TextView
+                    android:id="@+id/tv_show_img_in_public_storage_download_dir"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="顯示Public Storage download dir的圖片:" />
+
+                <ImageView
+                    android:id="@+id/im_img_in_public_storage_download_dir"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitCenter" />
+
+                <Button
+                    android:id="@+id/btn_img_in_public_storage_download_dir"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:text="Show image (需要權限、必須用 MediaSotre 查詢 URI 和 ContentResolver 存取)"
+                    android:textAllCaps="false" />
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </RelativeLayout>
+</layout>
